@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import "tailwindcss";
+
+:root{
+    --shopping : url('/assets/images/icon-add-to-cart.svg');
+    --less : url('/assets/images/icon-increment-quantity.svg');
+    --plus : url('/assets/images/icon-increment-quantity.svg');
+
+    --close : url('/assets/images/icon-remove-item.svg');
+
+    --carbon : url('/assets/images/icon-carbon-neutral.svg');
+    --cake : url('/assets/images/illustration-empty-cart.svg');
+    --check : url('/assets/images/icon-order-confirmed.svg')
+}
+
+
+@theme{
+
+    /* Font-family */
+    --font-redHat : "Red Hat Text", sans-serif;
+
+    /* Colors */
+    --color-p-red: hsl(14, 86%, 42%);
+    --color-p-green: hsl(159, 69%, 38%);
+    --color-p-rose-50: hsl(20, 50%, 98%);
+    --color-p-rose-100: hsl(13, 31%, 94%);
+    --color-p-rose-300: hsl(14, 25%, 72%);
+    --color-p-rose-400: hsl(7, 20%, 60%);
+    --color-p-rose-500: hsl(12, 20%, 44%);
+    --color-p-rose-900: hsl(14, 65%, 9%);
+
+    /* breakpoint */
+    --breakpoint-minimum  : 30rem;
+
+}

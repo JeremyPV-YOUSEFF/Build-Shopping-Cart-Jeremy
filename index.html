@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="relative min-h-screen w-full font-redHat" >
+  
+  <div 
+  id="shopping-main"
+  class="absolute inset-0 z-50 mt-20 mx-4 bg-p-rose-50 hidden ">
+
+    <section 
+    id="show-no-item"
+    class="flex flex-col  px-4 py-6 bg-white rounded-xl shadow gap-4 show-no-item" >
+      <div class="flex justify-end">
+        <span class="close-shopping block bg-cover bg-center bg-(image:--close) size-6 cursor-pointer" ></span>
+      </div>
+      <span class="block bg-center bg-cover bg-(image:--cake) size-16 mx-auto"></span>
+      <h4 class="text-p-rose-500 font-semibold text-sm text-center" >Your added items will appear here</h4>
+    </section>
+
+    <section 
+    id="shopping"
+    class="flex flex-col px-4 py-6 bg-white rounded-xl shadow shopping">
+      <div class="flex justify-end pb-6">
+        <span class="close-shopping block bg-cover bg-center bg-(image:--close) size-6 cursor-pointer" ></span>
+      </div>
+      <h2 class="text-2xl text-p-red font-bold" >Your Cart <span></span></h2>
+      <ul id="shopping-content" class="flex flex-col gap-4" >
+        <!-- list-item -->
+      </ul>
+      <section class="flex justify-between items-center py-5" >
+        <h5 class="font-medium text-p-rose-900">Order Total</h5>
+        <h2 id="total" class="text-2xl font-bold" ></h2>
+      </section>
+      <div class="flex justify-center gap-1 mx-4 px-3 py-2 bg-p-rose-100 rounded-xl">
+        <span class="block bg-cover bg-center bg-(image:--carbon) size-5"></span>
+        <h4>This is <span class="font-bold" >carbon-neutral</span> delivery</h4>
+      </div>
+      <button 
+      type="button" 
+      class="confirm-order mt-5 py-2 rounded-xl bg-p-red text-white hover:text-p-rose-500 cursor-pointer font-medium" >
+        Confirm Order
+      </button>
+    </section>
+
+  </div>
+
+  <main 
+  class="min-h-screen bg-p-rose-50 lg:px-20">
+
+    <section class="grid grid-cols-1 minimum:grid-cols-2 sm:grid-cols-3 gap-5">
+
+      <!-- List of Desserts -->
+      <article 
+      class="col-span-1 minimum:col-span-2 sm:col-span-3 lg:col-span-2  ">
+
+        <section 
+        class="py-4 bg-p-rose-100 fixed z-50 w-full px-5 shadow flex justify-between lg:bg-transparent lg:relative lg:z-0 lg:shadow-none">
+          <h1 class="text-3xl text-p-rose-900 font-bold">Desserts</h1>
+          <div 
+          class="relative size-10 flex justify-center items-center lg:hidden">
+            <span 
+            id="toggle-shopping"
+            class="block bg-center bg-cover bg-(image:--shopping) size-7 cursor-pointer" ></span>
+            <div 
+            id="quantity"
+            class="absolute items-center justify-center top-0 right-0 font-semibold text-p-rose-50 z-50  rounded-full size-5 hidden">
+              <h6 id="quantity-text" class="text-sm"></h6>
+            </div>
+          </div>
+        </section>
+
+        <ul 
+        id="list-content" 
+        class="grid grid-cols-1 minimum:grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-5 px-5 py-20 lg:py-5" >
+          <!-- List-items -->
+        </ul>
+
+      </article>
+
+      <!-- Shopping cart -->
+      <article class="hidden lg:block lg:col-span-1 mr-4 mt-5" >
+        <section 
+        class="flex flex-col  px-4 py-6 bg-white rounded-xl shadow gap-4 show-no-item" >
+          <div class="flex justify-end lg:hidden">
+            <span class="close-shopping block bg-cover bg-center bg-(image:--close) size-6 cursor-pointer" ></span>
+          </div>
+          <span class="block bg-center bg-cover bg-(image:--cake) size-16 mx-auto"></span>
+          <h4 class="text-p-rose-500 font-semibold text-sm text-center" >Your added items will appear here</h4>
+        </section>
+
+        <section 
+        id="shopping"
+        class="flex flex-col px-4 py-6 bg-white rounded-xl shadow shopping">
+          <div class="flex justify-end pb-6 lg:hidden">
+            <span class="close-shopping block bg-cover bg-center bg-(image:--close) size-6 cursor-pointer" ></span>
+          </div>
+          <h2 class="text-2xl text-p-red font-bold" >Your Cart <span></span></h2>
+          <ul id="shopping-content" class="flex flex-col gap-4 shopping-content" >
+            <!-- list-item -->
+          </ul>
+          <section class="flex justify-between items-center py-5" >
+            <h5 class="font-medium text-p-rose-900">Order Total</h5>
+            <h2 id="total" class="text-2xl font-bold" ></h2>
+          </section>
+          <div class="flex justify-center gap-1 mx-4 px-3 py-2 bg-p-rose-100 rounded-xl">
+            <span class="block bg-cover bg-center bg-(image:--carbon) size-5"></span>
+            <h4>This is <span class="font-bold" >carbon-neutral</span> delivery</h4>
+          </div>
+          <button 
+          type="button" 
+          class="confirm-order mt-5 py-2 rounded-xl bg-p-red text-white hover:text-p-rose-500 cursor-pointer font-medium" >
+            Confirm Order
+          </button>
+        </section>
+      </article>
+
+    </section>
+
+  </main>
+
+  <div id="order" 
+  class="z-50 absolute inset-0 mt-20 bg-white shadow rounded-t-2xl lg:bg-transparent hidden" >
+    <div 
+    class="flex flex-col px-5 py-10 h-screen lg:mx-120 lg:rounded-2xl bg-p-rose-50 rounded-t-2xl shadow gap-3">
+      <span class="block bg-cover bg-center bg-(image:--check) size-10" ></span>
+      <h1 class="text-4xl font-semibold">Order <br>Confirmed</h1>
+      <p class="text-p-rose-500">We hope you enjoy your food!</p>  
+      <ul 
+      id="order-content"
+      class="flex flex-col bg-p-rose-100  py-5 px-3 rounded-lg">
+        
+        <li class="flex justify-between pt-3 items-center order-1" >
+          <h3 class="text-p-rose-900 font-normal" >Order Total</h3>
+          <h2 id="order-total" class="text-2xl font-semibold text-p-rose-900" >S/46.50</h2>
+        </li>
+      </ul>
+      <button id="finish" class="bg-p-red rounded-xl text-lg py-3 text-white cursor-pointer hover:text-p-rose-300" >Start New Order</button>
+    </div>
+  </div>
+
+  <div 
+  id="message"
+  class="fixed transform bottom-5 px-4 py-2 w-4/5 sm:w-3/5 md:w-2/5 rounded-xl bg-p-red left-1/2 -translate-x-1/2 hidden">
+    <h3 id="text-message" class="font-medium text-p-rose-50 text-center" >Product successfully added</h3>
+  </div>
+
+  <div 
+  id="confirmation"
+  class="z-50 fixed transform px-4 py-2 w-4/5 sm:w-3/5 md:w-2/5 bg-p-rose-300 rounded-lg top-1/2 gap-5 -translate-y-1/2 left-1/2 -translate-x-1/2
+           flex-col hidden">
+    <h4 class="text-center text-p-rose-900 font-semibold" >Are you sure you want to continue with this procedure?</h4>
+    <div class="flex justify-between *:px-3 font-semibold *:py-2 *:rounded-lg">
+      <button id="cancel" class="bg-p-rose-50 text-p-rose-900 cursor-pointer">Cancel</button>
+      <button id="confirm" class="bg-p-rose-900 text-p-rose-50 cursor-pointer">Accept</button>
+    </div>
+  </div>
+
+  <div class="attribution absolute bottom-0 left-1/2 -translate-x-1/2"> 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Jeremy</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
