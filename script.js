@@ -23,7 +23,7 @@ window.addEventListener('resize',() => {
 
 /* Get data form data.json */
 async function getData(){
-    const data = await fetch('/data.json').then(response => response.json());
+    const data = await fetch('./data.json').then(response => response.json());
     const local = localStorage.getItem('shoppingCart')
     if (!local) {
         buildList(data);
