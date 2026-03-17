@@ -2,15 +2,15 @@
 @import "tailwindcss";
 
 :root{
-    --shopping : url('/assets/images/icon-add-to-cart.svg');
-    --less : url('/assets/images/icon-increment-quantity.svg');
-    --plus : url('/assets/images/icon-increment-quantity.svg');
+    --shopping : url('./assets/images/icon-add-to-cart.svg');
+    --less : url('./assets/images/icon-increment-quantity.svg');
+    --plus : url('./assets/images/icon-increment-quantity.svg');
 
-    --close : url('/assets/images/icon-remove-item.svg');
+    --close : url('./assets/images/icon-remove-item.svg');
 
-    --carbon : url('/assets/images/icon-carbon-neutral.svg');
-    --cake : url('/assets/images/illustration-empty-cart.svg');
-    --check : url('/assets/images/icon-order-confirmed.svg')
+    --carbon : url('./assets/images/icon-carbon-neutral.svg');
+    --cake : url('./assets/images/illustration-empty-cart.svg');
+    --check : url('./assets/images/icon-order-confirmed.svg')
 }
 
 

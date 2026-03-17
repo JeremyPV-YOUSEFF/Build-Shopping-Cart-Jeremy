@@ -8,8 +8,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -759,13 +757,13 @@
   }
 }
 :root {
-  --shopping: url('/assets/images/icon-add-to-cart.svg');
-  --less: url('/assets/images/icon-increment-quantity.svg');
-  --plus: url('/assets/images/icon-increment-quantity.svg');
-  --close: url('/assets/images/icon-remove-item.svg');
-  --carbon: url('/assets/images/icon-carbon-neutral.svg');
-  --cake: url('/assets/images/illustration-empty-cart.svg');
-  --check: url('/assets/images/icon-order-confirmed.svg');
+  --shopping: url('./assets/images/icon-add-to-cart.svg');
+  --less: url('./assets/images/icon-increment-quantity.svg');
+  --plus: url('./assets/images/icon-increment-quantity.svg');
+  --close: url('./assets/images/icon-remove-item.svg');
+  --carbon: url('./assets/images/icon-carbon-neutral.svg');
+  --cake: url('./assets/images/illustration-empty-cart.svg');
+  --check: url('./assets/images/icon-order-confirmed.svg');
 }
 @property --tw-translate-x {
   syntax: "*";
